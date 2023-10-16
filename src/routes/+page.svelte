@@ -1,6 +1,6 @@
 
 <div class="container h-full mx-auto flex justify-center items-center mt-60">
-	<div class="card text-center p-6">
+	<div class="card text-center p-6 shadow-2xl">
 		<header class="card-header text-4xl">Angielski 2023/2024</header>
 		<section class="p-4 grid grid-rows-1">
 			<a href="/list" class="btn variant-filled-primary m-2">Lista słówek</a>
