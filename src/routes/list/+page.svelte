@@ -2,7 +2,7 @@
 	let categories = [];
     export let data;
 	data.categories.forEach(element => {
-		categories.push({element:element, status:false});
+		categories.push({element:element.category, status:false});
 	});
 	categories[0].status = true;
 	function catClicked(e){
@@ -15,8 +15,8 @@
 	<div class="grid grid-cols-3 w-full items-center text-center">
 			{#each data.categories as category, index}
 			<label class="flex items-center space-x-2 m-auto">
-				<input class="checkbox" type="checkbox" name={category} on:click={catClicked} checked={index==0}/>
-				<p>{category}</p>
+				<input class="checkbox" type="checkbox" name={category.category} on:click={catClicked} checked={index==0}/>
+				<p>{category.category} ({category.count})</p>
 			</label>
 			{/each}
 	</div>
