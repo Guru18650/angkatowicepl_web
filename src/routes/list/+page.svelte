@@ -11,7 +11,7 @@
 	}
 </script>
 
-<div class="container h-full mx-auto flex justify-center card shadow-2xl flex-col p-5 items-center mt-60 md:w-1/3 w-full">
+<div class="container h-full mx-auto flex justify-center card shadow-2xl flex-col p-5 items-center md:mt-28 mt-20 md:w-1/3 w-full">
 	<div class="grid grid-cols-3 w-full items-center text-center">
 			{#each data.categories as category, index}
 			<label class="flex items-center space-x-2 m-auto">
@@ -21,8 +21,8 @@
 			{/each}
 	</div>
 	
-<div class="table-container mt-5 bg-primary-400">
-	<table class="table table-hover">
+<div class="table-container mt-5 bg-primary-400 shadow-2xl">
+	<table class="table table-hover ">
 		<thead>
 			<tr>
 				<th class="text-center">Angielski</th>

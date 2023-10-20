@@ -1,0 +1,830 @@
+[
+  {
+    "pl": "powstawać",
+    "f1": "arise",
+    "f2": "arose",
+    "f3": "arisen"
+  },
+  {
+    "pl": "obudzić się",
+    "f1": "awake",
+    "f2": "awoke",
+    "f3": "awoken"
+  },
+  {
+    "pl": "być",
+    "f1": "be",
+    "f2": "was, were",
+    "f3": "been"
+  },
+  {
+    "pl": "rodzić",
+    "f1": "bear",
+    "f2": "bore",
+    "f3": "born"
+  },
+  {
+    "pl": "bić",
+    "f1": "beat",
+    "f2": "beat",
+    "f3": "beaten"
+  },
+  {
+    "pl": "stawać się",
+    "f1": "become",
+    "f2": "became",
+    "f3": "become"
+  },
+  {
+    "pl": "zaczynać",
+    "f1": "begin",
+    "f2": "began",
+    "f3": "begun"
+  },
+  {
+    "pl": "ginąć",
+    "f1": "bend",
+    "f2": "bent",
+    "f3": "bent"
+  },
+  {
+    "pl": "stawiać zakład",
+    "f1": "bet",
+    "f2": "bet",
+    "f3": "bet"
+  },
+  {
+    "pl": "wiązać",
+    "f1": "bind",
+    "f2": "bound",
+    "f3": "bound"
+  },
+  {
+    "pl": "gryźć",
+    "f1": "bite",
+    "f2": "bit",
+    "f3": "bitten"
+  },
+  {
+    "pl": "krwawić",
+    "f1": "bleed",
+    "f2": "bled",
+    "f3": "bled"
+  },
+  {
+    "pl": "dmuchać",
+    "f1": "blow",
+    "f2": "blew",
+    "f3": "blown"
+  },
+  {
+    "pl": "łamać",
+    "f1": "break",
+    "f2": "broke",
+    "f3": "broken"
+  },
+  {
+    "pl": "hodować",
+    "f1": "breed",
+    "f2": "bred",
+    "f3": "bred"
+  },
+  {
+    "pl": "przynosić",
+    "f1": "bring",
+    "f2": "brought",
+    "f3": "brought"
+  },
+  {
+    "pl": "nadawać",
+    "f1": "broadcast",
+    "f2": "broadcast",
+    "f3": "broadcast"
+  },
+  {
+    "pl": "budować",
+    "f1": "build",
+    "f2": "built",
+    "f3": "built"
+  },
+  {
+    "pl": "palić",
+    "f1": "burn",
+    "f2": "burned, burnt",
+    "f3": "burned, burnt"
+  },
+  {
+    "pl": "kupować",
+    "f1": "buy",
+    "f2": "bought",
+    "f3": "bought"
+  },
+  {
+    "pl": "rzucić",
+    "f1": "cast",
+    "f2": "cast",
+    "f3": "cast"
+  },
+  {
+    "pl": "łapać",
+    "f1": "catch",
+    "f2": "caught",
+    "f3": "caught"
+  },
+  {
+    "pl": "wybierać",
+    "f1": "choose",
+    "f2": "chose",
+    "f3": "chosen"
+  },
+  {
+    "pl": "trzymać się",
+    "f1": "cling",
+    "f2": "clung",
+    "f3": "clung"
+  },
+  {
+    "pl": "przyjść",
+    "f1": "come",
+    "f2": "came",
+    "f3": "come"
+  },
+  {
+    "pl": "kosztować",
+    "f1": "cost",
+    "f2": "cost",
+    "f3": "cost"
+  },
+  {
+    "pl": "ciąć",
+    "f1": "cut",
+    "f2": "cut",
+    "f3": "cut"
+  },
+  {
+    "pl": "handlować",
+    "f1": "deal",
+    "f2": "dealt",
+    "f3": "dealt"
+  },
+  {
+    "pl": "kopać",
+    "f1": "dig",
+    "f2": "dug",
+    "f3": "dug"
+  },
+  {
+    "pl": "robić",
+    "f1": "do",
+    "f2": "did",
+    "f3": "done"
+  },
+  {
+    "pl": "rysować",
+    "f1": "draw",
+    "f2": "drew",
+    "f3": "drawn"
+  },
+  {
+    "pl": "śnić",
+    "f1": "dream",
+    "f2": "dreamed, dreamt",
+    "f3": "dreamed, dreamt"
+  },
+  {
+    "pl": "pić",
+    "f1": "drink",
+    "f2": "drank",
+    "f3": "drunk"
+  },
+  {
+    "pl": "prowadzić",
+    "f1": "drive",
+    "f2": "drove",
+    "f3": "driven"
+  },
+  {
+    "pl": "jeść",
+    "f1": "eat",
+    "f2": "ate",
+    "f3": "eaten"
+  },
+  {
+    "pl": "czuć",
+    "f1": "feel",
+    "f2": "felt",
+    "f3": "felt"
+  },
+  {
+    "pl": "walczyć",
+    "f1": "fight",
+    "f2": "fought",
+    "f3": "fought"
+  },
+  {
+    "pl": "znaleźć",
+    "f1": "find",
+    "f2": "found",
+    "f3": "found"
+  },
+  {
+    "pl": "pasować",
+    "f1": "fit",
+    "f2": "fit",
+    "f3": "fit"
+  },
+  {
+    "pl": "uciekać",
+    "f1": "flee",
+    "f2": "fled",
+    "f3": "fled"
+  },
+  {
+    "pl": "latać",
+    "f1": "fly",
+    "f2": "flew",
+    "f3": "flown"
+  },
+  {
+    "pl": "zabraniać",
+    "f1": "forbid",
+    "f2": "forbade",
+    "f3": "forbidden"
+  },
+  {
+    "pl": "przewidywać",
+    "f1": "forecast",
+    "f2": "forecast",
+    "f3": "forecast"
+  },
+  {
+    "pl": "zapominać",
+    "f1": "forget",
+    "f2": "forgot",
+    "f3": "forgotten"
+  },
+  {
+    "pl": "przebaczać",
+    "f1": "forgive",
+    "f2": "forgave",
+    "f3": "forgiven"
+  },
+  {
+    "pl": "zamarzać",
+    "f1": "freeze",
+    "f2": "froze",
+    "f3": "frozen"
+  },
+  {
+    "pl": "dostawać",
+    "f1": "get",
+    "f2": "got",
+    "f3": "got"
+  },
+  {
+    "pl": "dawać",
+    "f1": "give",
+    "f2": "gave",
+    "f3": "given"
+  },
+  {
+    "pl": "iść",
+    "f1": "go",
+    "f2": "went",
+    "f3": "gone"
+  },
+  {
+    "pl": "rosnąć",
+    "f1": "grow",
+    "f2": "grew",
+    "f3": "grown"
+  },
+  {
+    "pl": "wisieć",
+    "f1": "hang",
+    "f2": "hung",
+    "f3": "hung"
+  },
+  {
+    "pl": "mieć",
+    "f1": "have",
+    "f2": "had",
+    "f3": "had"
+  },
+  {
+    "pl": "słyszeć",
+    "f1": "hear",
+    "f2": "heard",
+    "f3": "heard"
+  },
+  {
+    "pl": "ukrywać",
+    "f1": "hide",
+    "f2": "hid",
+    "f3": "hidden"
+  },
+  {
+    "pl": "uderzać",
+    "f1": "hit",
+    "f2": "hit",
+    "f3": "hit"
+  },
+  {
+    "pl": "trzymać",
+    "f1": "hold",
+    "f2": "held",
+    "f3": "held"
+  },
+  {
+    "pl": "ranić",
+    "f1": "hurt",
+    "f2": "hurt",
+    "f3": "hurt"
+  },
+  {
+    "pl": "utrzymywać",
+    "f1": "keep",
+    "f2": "kept",
+    "f3": "kept"
+  },
+  {
+    "pl": "klękać",
+    "f1": "kneel",
+    "f2": "knelt, kneeled",
+    "f3": "knelt, kneeled"
+  },
+  {
+    "pl": "robić na drutach",
+    "f1": "knit",
+    "f2": "knitted",
+    "f3": "knitted"
+  },
+  {
+    "pl": "wiedzieć",
+    "f1": "know",
+    "f2": "knew",
+    "f3": "known"
+  },
+  {
+    "pl": "kłaść",
+    "f1": "lay",
+    "f2": "laid",
+    "f3": "laid"
+  },
+  {
+    "pl": "prowadzić",
+    "f1": "lead",
+    "f2": "led",
+    "f3": "led"
+  },
+  {
+    "pl": "pochylić się",
+    "f1": "lean",
+    "f2": "leant, leaned",
+    "f3": "leant, leaned"
+  },
+  {
+    "pl": "skakać",
+    "f1": "leap",
+    "f2": "leapt, leaped",
+    "f3": "leapt, leaped"
+  },
+  {
+    "pl": "uczyć się",
+    "f1": "learn",
+    "f2": "learnt, learned",
+    "f3": "learnt, learned"
+  },
+  {
+    "pl": "opuszczać",
+    "f1": "leave",
+    "f2": "left",
+    "f3": "left"
+  },
+  {
+    "pl": "pożyczać",
+    "f1": "lend",
+    "f2": "lent",
+    "f3": "lent"
+  },
+  {
+    "pl": "pozwolić",
+    "f1": "let",
+    "f2": "let",
+    "f3": "let"
+  },
+  {
+    "pl": "leżeć",
+    "f1": "lie",
+    "f2": "lay",
+    "f3": "lain"
+  },
+  {
+    "pl": "zapalać",
+    "f1": "light",
+    "f2": "lit",
+    "f3": "lit"
+  },
+  {
+    "pl": "gubić",
+    "f1": "lose",
+    "f2": "lost",
+    "f3": "lost"
+  },
+  {
+    "pl": "robić",
+    "f1": "make",
+    "f2": "made",
+    "f3": "made"
+  },
+  {
+    "pl": "znaczyć",
+    "f1": "mean",
+    "f2": "meant",
+    "f3": "meant"
+  },
+  {
+    "pl": "spotykać",
+    "f1": "meet",
+    "f2": "met",
+    "f3": "met"
+  },
+  {
+    "pl": "pomylić",
+    "f1": "mistake",
+    "f2": "mistook",
+    "f3": "mistaken"
+  },
+  {
+    "pl": "kosić",
+    "f1": "mow",
+    "f2": "mowed",
+    "f3": "mown, mowned"
+  },
+  {
+    "pl": "pokonywać",
+    "f1": "overcome",
+    "f2": "overcame",
+    "f3": "overcome"
+  },
+  {
+    "pl": "zaspać",
+    "f1": "oversleep",
+    "f2": "overslept",
+    "f3": "overslept"
+  },
+  {
+    "pl": "płacić",
+    "f1": "pay",
+    "f2": "paid",
+    "f3": "paid"
+  },
+  {
+    "pl": "udowadniać",
+    "f1": "prove",
+    "f2": "proved",
+    "f3": "proven, proven"
+  },
+  {
+    "pl": "kłaść",
+    "f1": "put",
+    "f2": "put",
+    "f3": "put"
+  },
+  {
+    "pl": "rzucić",
+    "f1": "quit",
+    "f2": "quit",
+    "f3": "quit"
+  },
+  {
+    "pl": "czytać",
+    "f1": "read",
+    "f2": "read",
+    "f3": "read"
+  },
+  {
+    "pl": "uwolnić się",
+    "f1": "rid",
+    "f2": "rid",
+    "f3": "rid"
+  },
+  {
+    "pl": "jeździć",
+    "f1": "ride",
+    "f2": "rode",
+    "f3": "ridden"
+  },
+  {
+    "pl": "dzwonić",
+    "f1": "ring",
+    "f2": "rang",
+    "f3": "rung"
+  },
+  {
+    "pl": "wzrastać",
+    "f1": "rise",
+    "f2": "rose",
+    "f3": "risen"
+  },
+  {
+    "pl": "biec",
+    "f1": "run",
+    "f2": "ran",
+    "f3": "run"
+  },
+  {
+    "pl": "mówić",
+    "f1": "say",
+    "f2": "said",
+    "f3": "said"
+  },
+  {
+    "pl": "widzieć",
+    "f1": "see",
+    "f2": "saw",
+    "f3": "seen"
+  },
+  {
+    "pl": "szukać",
+    "f1": "seek",
+    "f2": "sought",
+    "f3": "sought"
+  },
+  {
+    "pl": "sprzedawać",
+    "f1": "sell",
+    "f2": "sold",
+    "f3": "sold"
+  },
+  {
+    "pl": "wysyłać",
+    "f1": "send",
+    "f2": "sent",
+    "f3": "sent"
+  },
+  {
+    "pl": "ustawiać",
+    "f1": "set",
+    "f2": "set",
+    "f3": "set"
+  },
+  {
+    "pl": "szyć",
+    "f1": "sew",
+    "f2": "sewed",
+    "f3": "sewn, sewed"
+  },
+  {
+    "pl": "trząść",
+    "f1": "shake",
+    "f2": "shook",
+    "f3": "shaken"
+  },
+  {
+    "pl": "zrzucać",
+    "f1": "shed",
+    "f2": "shed",
+    "f3": "shed"
+  },
+  {
+    "pl": "świecić",
+    "f1": "shine",
+    "f2": "shone",
+    "f3": "shone"
+  },
+  {
+    "pl": "strzelać",
+    "f1": "shoot",
+    "f2": "shot",
+    "f3": "shot"
+  },
+  {
+    "pl": "pokazywać",
+    "f1": "show",
+    "f2": "showed",
+    "f3": "shown"
+  },
+  {
+    "pl": "kurczyć się",
+    "f1": "shrink",
+    "f2": "shrank",
+    "f3": "shrunk"
+  },
+  {
+    "pl": "zamykać",
+    "f1": "shut",
+    "f2": "shut",
+    "f3": "shut"
+  },
+  {
+    "pl": "śpiewać",
+    "f1": "sing",
+    "f2": "sang",
+    "f3": "sung"
+  },
+  {
+    "pl": "tonąć",
+    "f1": "sink",
+    "f2": "sank",
+    "f3": "sunk"
+  },
+  {
+    "pl": "siedzieć",
+    "f1": "sit",
+    "f2": "sat",
+    "f3": "sat"
+  },
+  {
+    "pl": "spać",
+    "f1": "sleep",
+    "f2": "slept",
+    "f3": "slept"
+  },
+  {
+    "pl": "ślizgać się",
+    "f1": "slide",
+    "f2": "slid",
+    "f3": "slid"
+  },
+  {
+    "pl": "pachnieć",
+    "f1": "smell",
+    "f2": "smelled, smelt",
+    "f3": "smelled, smelt"
+  },
+  {
+    "pl": "mówić",
+    "f1": "speak",
+    "f2": "spoke",
+    "f3": "spoken"
+  },
+  {
+    "pl": "prędkość",
+    "f1": "speed",
+    "f2": "speeded, sped",
+    "f3": "speeded, sped"
+  },
+  {
+    "pl": "wydawać",
+    "f1": "spend",
+    "f2": "spent",
+    "f3": "spent"
+  },
+  {
+    "pl": "kraść",
+    "f1": "steal",
+    "f2": "stole",
+    "f3": "stolen"
+  },
+  {
+    "pl": "przyklejać",
+    "f1": "stick",
+    "f2": "stuck",
+    "f3": "stuck"
+  },
+  {
+    "pl": "żądlić",
+    "f1": "sting",
+    "f2": "stung",
+    "f3": "stung"
+  },
+  {
+    "pl": "śmierdzieć",
+    "f1": "stink",
+    "f2": "stank",
+    "f3": "stunk"
+  },
+  {
+    "pl": "uderzać",
+    "f1": "strike",
+    "f2": "struck",
+    "f3": "struck"
+  },
+  {
+    "pl": "przysięgać",
+    "f1": "swear",
+    "f2": "swore",
+    "f3": "sworn"
+  },
+  {
+    "pl": "zamiatać",
+    "f1": "sweep",
+    "f2": "swept",
+    "f3": "swept"
+  },
+  {
+    "pl": "puchnąć",
+    "f1": "swell",
+    "f2": "swelled",
+    "f3": "swollen, swelled"
+  },
+  {
+    "pl": "pływać",
+    "f1": "swim",
+    "f2": "swam",
+    "f3": "swum"
+  },
+  {
+    "pl": "huśtać się",
+    "f1": "swing",
+    "f2": "swung",
+    "f3": "swung"
+  },
+  {
+    "pl": "brać",
+    "f1": "take",
+    "f2": "took",
+    "f3": "taken"
+  },
+  {
+    "pl": "nauczać",
+    "f1": "teach",
+    "f2": "taught",
+    "f3": "taught"
+  },
+  {
+    "pl": "drzeć",
+    "f1": "tear",
+    "f2": "tore",
+    "f3": "torn"
+  },
+  {
+    "pl": "mówić",
+    "f1": "tell",
+    "f2": "told",
+    "f3": "told"
+  },
+  {
+    "pl": "myśleć",
+    "f1": "think",
+    "f2": "thought",
+    "f3": "thought"
+  },
+  {
+    "pl": "rzucać",
+    "f1": "throw",
+    "f2": "threw",
+    "f3": "thrown"
+  },
+  {
+    "pl": "wpychać",
+    "f1": "thrust",
+    "f2": "thrust",
+    "f3": "thrust"
+  },
+  {
+    "pl": "przechodzić",
+    "f1": "undergo",
+    "f2": "underwent",
+    "f3": "undergone"
+  },
+  {
+    "pl": "rozumieć",
+    "f1": "understand",
+    "f2": "understood",
+    "f3": "understood"
+  },
+  {
+    "pl": "budzić się",
+    "f1": "wake",
+    "f2": "woke",
+    "f3": "woken"
+  },
+  {
+    "pl": "nosić",
+    "f1": "wear",
+    "f2": "wore",
+    "f3": "worn"
+  },
+  {
+    "pl": "wygrywać",
+    "f1": "win",
+    "f2": "won",
+    "f3": "won"
+  },
+  {
+    "pl": "nakręcać",
+    "f1": "wind",
+    "f2": "wound",
+    "f3": "wound"
+  },
+  {
+    "pl": "wycofywać",
+    "f1": "withdraw",
+    "f2": "withdrew",
+    "f3": "withdrawn"
+  },
+  {
+    "pl": "wykręcać",
+    "f1": "wring",
+    "f2": "wrung",
+    "f3": "wrung"
+  },
+  {
+    "pl": "pisać",
+    "f1": "write",
+    "f2": "wrote",
+    "f3": "written"
+  }
+]

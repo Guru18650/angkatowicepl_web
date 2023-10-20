@@ -7,5 +7,6 @@ export async function query(endpoint, data) {
         body: JSON.stringify(data),
       });
       var data = await rows.json();
+      
       return data.data;
 }
