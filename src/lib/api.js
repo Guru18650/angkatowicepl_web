@@ -1,7 +1,7 @@
 import { redirect } from "@sveltejs/kit";
 
 export async function query(endpoint, data) {
-    var rows = await fetch('http://localhost:3000'+endpoint,{
+    var rows = await fetch('http://45.138.26.6:3003'+endpoint,{
         method: "POST",
         headers: {
           "Content-Type": "application/json",
