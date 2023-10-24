@@ -194,7 +194,7 @@
 </script>
 
 <div
-  class="container h-full mx-auto flex justify-center card shadow-2xl flex-col p-4 pt-0 items-center md:mt-28 md:w-1/3 w-full"
+  class="container h-full mx-auto flex justify-center card shadow-2xl flex-col p-4 pt-0 items-center md:mt-28 md:w-2/3 w-full"
 >
   {#if !playing}
     <div class="grid grid-cols-2 items-center w-full">
