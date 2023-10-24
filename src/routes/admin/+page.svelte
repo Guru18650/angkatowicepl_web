@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let data, polish, english, fastInput, fastCategory, fastsubCategory, fastsubMode, addAllbtn, cat, ninput, scatval;
+    export let data, fastInput, fastCategory, fastsubCategory, fastsubMode, addAllbtn, ninput, scatval;
     let fastI = 0;
     let addArray = [];
 	import { enhance } from '$app/forms';
