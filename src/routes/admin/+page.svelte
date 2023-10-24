@@ -1,12 +1,12 @@
 <script lang="ts">
-    export let data, polish, english, fastInput, fastCategory, addAllbtn;
+    export let data, polish, english, fastInput, fastCategory, fastsubCategory, fastsubMode, addAllbtn, cat, ninput, scatval;
     let fastI = 0;
     let addArray = [];
 	import { enhance } from '$app/forms';
     import { getToastStore } from '@skeletonlabs/skeleton';
     const toastStore = getToastStore();
     import { invalidateAll } from '$app/navigation';
-    var temp = {polish:"",english:"",category:""};
+    var temp = {polish:"",english:"",category:"",subcategory:"",extended:""};
 
     function enterPressed(e){
         if(e.key == "Enter"){
@@ -14,7 +14,7 @@
                 case 0:
                     if(fastInput.value == "")
                     return;
-                    temp = {polish:"",english:"",category:fastCategory.value};
+                    temp = {polish:"",english:"",category:fastCategory.value, subcategory:fastsubCategory.value, extended:fastsubMode.value};
                     fastInput.placeholder = "Polski"
                     temp.english = fastInput.value;
                     fastInput.value = "";
@@ -48,7 +48,7 @@
         addArray.forEach(async (element) => {
             await fetch('/api/addall', {
 			method: 'POST',
-			body: JSON.stringify({ polish:element.polish, english:element.english, category:element.category}),
+			body: JSON.stringify({ polish:element.polish, english:element.english, category:element.category, subcategory:element.subcategory, extended:element.extended}),
 			headers: {
 				'content-type': 'application/json'
 			}
@@ -96,6 +96,108 @@
     </div>
     <div class="p-4 md:p-6 w-full  sm:max-w-2xl m-auto card rounded-2xl shadow-4xl md:mt-10 mt-5 text-center">
         <h1 class="text-lg leading-tight text-center tracking-tight md:text-3xl">
+            Szybkie dodawanie
+        </h1>
+       
+        <div class="pt-3 font-medium text-small">
+            <label class="label mt-3">
+                <select class="input rounded-lg" name="category" bind:this={fastCategory}  bind:value={scatval}>
+                    {#each data.categories as element}
+                        <option>{element.name}</option>
+                    {/each}
+                </select>
+            </label>
+            <div class="grid grid-cols-2">
+                <label class="label mt-3 mr-1">
+                    <select class="input rounded-lg" name="subcategory" bind:this={fastsubCategory}>
+                        {#each data.subcategories as element}
+                            {#if element.category == scatval} 
+                            <option>{element.name}</option>
+                            {/if}
+                        {/each}
+                    </select>
+                </label>
+                <label class="label mt-3 ml-1">
+                    <select class="input rounded-lg " name="subcategory" bind:this={fastsubMode}>
+                        <option>Podstawa</option>
+                        <option>Rozszerzenie</option>
+                    </select>
+                </label>
+            </div>
+            
+            <label class="label mt-3">
+                <input class="input rounded-lg mt-3" placeholder="Angielski" type="text" name="polish" bind:this={fastInput} on:keydown={enterPressed}/>
+            </label>
+            <div class="table-container mt-5 bg-primary-400 shadow-2xl">
+                <table class="table table-hover ">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Polski</th>
+                            <th class="text-center">Angielski</th>
+                            <th class="text-center">Kategoria</th>
+                            <th class="text-center">Subategoria</th>
+                            <th class="text-center">Akcja</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {#each addArray as row, id}
+                        <tr class={row.extended=="Rozszerzenie" ? "!variant-glass-primary" : ""}>
+                            <td class="text-center">{row.polish}</td>
+                            <td class="text-center">{row.english}</td>
+                            <td class="text-center">{row.category}</td>
+                            <td class="text-center">{row.subcategory}</td>
+                            <td class="!p-2"><button class="btn variant-filled-error rounded w-full" name={id} on:click={removeFast}>Usuń</button></td>
+                        </tr>
+                        {/each}
+                    </tbody>
+            
+                </table>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="m-2"><a href="/admin/words" class="btn variant-filled-secondary w-full rounded-lg mt-5">Lista</a></div>
+                <div class="m-2"><button class="btn variant-filled-primary w-full rounded-lg mt-5" disabled on:click={addAll} bind:this={addAllbtn}>Dodaj wszystkie</button></div>
+                
+            </div>
+          </div>
+    </div>
+    <div class="p-4 md:p-6 w-full  sm:max-w-2xl m-auto card rounded-2xl shadow-4xl md:mt-10 mt-5 text-center">
+        <h1 class="text-lg leading-tight text-center tracking-tight md:text-3xl">
+            Subkategorie
+        </h1>
+        <form method="POST" action="?/addSubCategory" 
+        use:enhance={({form}) => {return ({result, update }) => {
+            if(result.hasOwnProperty('data') != true){
+                toastStore.trigger({message:'Błąd'});
+            } else {
+                toastStore.trigger({message:'Sukces'});
+                ninput.value = "";
+                invalidateAll();
+
+            }
+        }}}>
+        <div class="pt-3 font-medium text-small">
+            <label class="label mt-3">
+                <span>Kategoria</span>
+                <select class="input rounded-lg" name="category">
+                    {#each data.categories as element}
+                        <option>{element.name}</option>
+                    {/each}
+                </select>
+            </label>
+
+            <label class="label mt-3">
+                <span>Nazwa</span>
+                <input class="input rounded-lg mt-3" type="text" name="name" bind:this={ninput}/>
+            </label>
+            <div class="grid grid-cols-2">
+                <div class="m-2"><a href="/admin/subcategories" class="btn variant-filled-secondary w-full rounded-lg mt-5">Lista</a></div>
+                <div class="m-2"><button type="submit" class="btn variant-filled-primary w-full rounded-lg mt-5">Dodaj</button></div>
+            </div>
+          </div>
+        </form>
+    </div>
+    <!--<div class="p-4 md:p-6 w-full  sm:max-w-2xl m-auto card rounded-2xl shadow-4xl md:mt-10 mt-5 text-center">
+        <h1 class="text-lg leading-tight text-center tracking-tight md:text-3xl">
             Słówka
         </h1>
         <form method="POST" action="?/addWord" 
@@ -119,9 +221,17 @@
             </label>
             <label class="label mt-3">
                 <span>Kategoria</span>
-                <select class="input rounded-lg" name="category">
+                <select class="input rounded-lg" name="category" bind:value={cat}>
                     {#each data.categories as element}
                         <option>{element.name}</option>
+                    {/each}
+                </select>
+                <span>Subkategoria</span>
+                <select class="input rounded-lg" name="subcategory">
+                    {#each data.subcategories as element}
+                        {#if element.category == cat} 
+                        <option>{element.name}</option>
+                        {/if}
                     {/each}
                 </select>
             </label>
@@ -132,49 +242,10 @@
           </div>
         </form>
     </div>
+-->
+    
+    
 
-    <div class="p-4 md:p-6 w-full  sm:max-w-2xl m-auto card rounded-2xl shadow-4xl md:mt-10 mt-5 text-center">
-        <h1 class="text-lg leading-tight text-center tracking-tight md:text-3xl">
-            Szybkie dodawanie
-        </h1>
-       
-        <div class="pt-3 font-medium text-small">
-            <label class="label mt-3">
-                <span>Kategoria</span>
-                <select class="input rounded-lg" name="category" bind:this={fastCategory}>
-                    {#each data.categories as element}
-                        <option>{element.name}</option>
-                    {/each}
-                </select>
-            </label>
-            <label class="label mt-3">
-                <input class="input rounded-lg mt-3" placeholder="Angielski" type="text" name="polish" bind:this={fastInput} on:keydown={enterPressed}/>
-            </label>
-            <div class="table-container mt-5 bg-primary-400 shadow-2xl">
-                <table class="table table-hover ">
-                    <thead>
-                        <tr>
-                            <th class="text-center">Polski</th>
-                            <th class="text-center">Angielski</th>
-                            <th class="text-center">Kategoria</th>
-                            <th class="text-center">Akcja</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {#each addArray as row, id}
-                        <tr>
-                            <td class="text-center">{row.polish}</td>
-                            <td class="text-center">{row.english}</td>
-                            <td class="text-center">{row.category}</td>
-                            <td class="!p-2"><button class="btn variant-filled-error rounded w-full" name={id} on:click={removeFast}>Usuń</button></td>
-                        </tr>
-                        {/each}
-                    </tbody>
-            
-                </table>
-            </div>
-            <button class="btn variant-filled-primary w-full rounded-lg mt-5" disabled on:click={addAll} bind:this={addAllbtn}>Dodaj wszystkie</button>
-          </div>
-    </div>
+    
     
 </div>
