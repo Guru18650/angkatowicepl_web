@@ -6,9 +6,9 @@ export async function POST({ request }) {
     if(polish!=""||english!=""||category!=""||subcategory!=""||extended!=""){
         let payload;
         if(extended=="Podstawa")
-            extended = 0;
+            extended = '0';
         else
-            extended = 1;
+            extended = '1';
         payload = {polish:polish, english:english, category:category, subcategory:subcategory, extended:extended};
         console.log(payload);
         var resp = await query('/words/addword', payload);
