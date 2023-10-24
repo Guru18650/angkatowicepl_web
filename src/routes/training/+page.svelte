@@ -30,46 +30,102 @@
     });
     data.words.forEach((element) => {
       if (finalcategories.includes(element.category)) {
-        console.log(element);
         finalwords.push(element);
       }
     });
     playing = true;
     if (playmode == 0) {
       play0randomword();
+    } else {
+      play1randomword()
     }
   }
 
   let rword;
 
+function play1randomword(){
+      switch (langmode) {
+      case "0":
+        switchWords1("english","polish");
+        break;
+      case "1":
+         switchWords1("polish","english");
+         break;
+      case "2":
+        if(Math.floor(Math.random() * 2))
+          switchWords1("polish","english");
+        else
+          switchWords1("english","polish");
+        break;
+      default:
+        break;
+    }
+}
+
   function play0randomword() {
+    switch (langmode) {
+      case "0":
+        switchWords0("english","polish");
+        break;
+      case "1":
+         switchWords0("polish","english");
+         break;
+      case "2":
+        if(Math.floor(Math.random() * 2))
+          switchWords0("polish","english");
+        else
+          switchWords0("english","polish");
+        break;
+      default:
+        break;
+    }
+
+
+   
+  }
+let guess;
+
+  function switchWords1(l1, l2){
+    guess = l1;
     rword = finalwords[Math.floor(Math.random() * finalwords.length)];
-    word = rword.english;
-    switch (Math.floor(Math.random() * 3)) {
-      case 0:
-        o1 = rword.polish;
-        o2 = finalwords[Math.floor(Math.random() * finalwords.length)].polish;
-        o3 = finalwords[Math.floor(Math.random() * finalwords.length)].polish;
+    word = rword[l2];
+  }
+
+  function switchWords0(l1, l2){
+        guess = l1;
+        rword = finalwords[Math.floor(Math.random() * finalwords.length)];
+        word = rword[l2];
+        o1 = rword[l1];
+        o2 = rword[l1];
+        o3 = rword[l1];
+     switch (Math.floor(Math.random() * 3)) {
+      case 0:   
+        while(o2==o1 || o3==o1 || o2==o3){
+          o2 = finalwords[Math.floor(Math.random() * finalwords.length)][l1];
+          o3 = finalwords[Math.floor(Math.random() * finalwords.length)][l1];
+        }
         break;
       case 1:
-        o1 = finalwords[Math.floor(Math.random() * finalwords.length)].polish;
-        o2 = rword.polish;
-        o3 = finalwords[Math.floor(Math.random() * finalwords.length)].polish;
-        break;
+        while(o2==o1 || o3==o1 || o2==o3){
+          o1 = finalwords[Math.floor(Math.random() * finalwords.length)][l1];
+          o3 = finalwords[Math.floor(Math.random() * finalwords.length)][l1];
+        }break;
       case 2:
-        o1 = finalwords[Math.floor(Math.random() * finalwords.length)].polish;
-        o2 = finalwords[Math.floor(Math.random() * finalwords.length)].polish;
-        o3 = rword.polish;
-        break;
+        while(o2==o1 || o3==o1 || o2==o3){
+          o1 = finalwords[Math.floor(Math.random() * finalwords.length)][l1];
+          o2 = finalwords[Math.floor(Math.random() * finalwords.length)][l1];
+        }break;
       default:
         break;
     }
   }
 
   function submitAnswer(e) {
+
     good = false;
     bad = false;
-    if(e.target.name == rword.polish){
+        if(playmode == 0){
+       if(e.target.name == rword[guess]){
         goodAnswers++;
         good = true;
     } else {
@@ -81,13 +137,28 @@
         finish = true;
     } else 
     play0randomword();
+  } else {
+    if(odpowiedz1 == rword[guess]){
+        goodAnswers++;
+        good = true;
+    } else {
+        badAnswers++;
+        bad = true;
+    }
+     i++;
+    if(i-1==imax){
+        finish = true;
+    } else 
+    play1randomword();
   }
 
+    }
+   
   function reload(){
     window.location.reload()
   }
 
-  let word,o1,o2,o3,i,imax = 10, good, bad, finish = false, goodAnswers, badAnswers;
+  let word,o1,o2,o3,i,imax = 10, good, bad, finish = false, goodAnswers, badAnswers, odpowiedz1;
 </script>
 
 <div
@@ -113,9 +184,9 @@
       <label class="label m-4">
         <span>Tryb języka</span>
         <select class="select" bind:value={langmode}>
-          <option value="1">Polski -> Angielski</option>
-          <option value="2">Angielski -> Polski</option>
-          <option value="3">Losowo</option>
+          <option value="0">Polski -> Angielski</option>
+          <option value="1">Angielski -> Polski</option>
+          <option value="2">Losowo</option>
         </select>
       </label>
       <label class="label m-4">
@@ -166,6 +237,25 @@
       >
     </div>
   {:else}
-    <p>Wpisywanie</p>
+    {#if bad}
+    <p class="text-red-600 text-xl">Źle; Poprawna odpowiedź: <b>{rword[guess]}</b></p>
+    {/if}
+    {#if good}
+    <p class="text-green-600 text-xl">Dobrze</p>
+    {/if}
+    {#if !bad && !good} 
+    <p class="text-xl">Wpisz odpowiedź</p>
+    {/if}
+    <p class="text-center text-4xl mt-2">{word}</p>
+    <div class="grid grid-cols-1 w-full mt-5">
+      <label class="label mt-3">
+      <span>Tłumaczenie</span>
+      <input class="input rounded-lg" bind:value={odpowiedz1}/>
+    </label>
+    <button
+        class="btn variant-filled-primary rounded-lg mt-4"
+        on:click={submitAnswer}>Zatwierdź</button
+      >
+    </div>
   {/if}
 </div>
