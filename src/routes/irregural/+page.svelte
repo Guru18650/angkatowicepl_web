@@ -2,7 +2,7 @@
     export let data;
 </script>
 
-<div class="container h-full mx-auto flex justify-center card shadow-2xl flex-col md:p-5 pt-5 items-center md:mt-16 mt-5 md:w-2/3 w-full">
+<div class="container h-full mx-auto flex justify-center card shadow-2xl flex-col md:p-5 pt-5 items-center md:mt-16 mt-5w-full">
 <h1 class="text-2xl">Czasowniki niereguralne</h1>
 <h3 class="text-center">138 czasowników z podręcznika, to nie wszystkie istniejące</h3>
 <div class="grid grid-cols-1 md:grid-cols-2 w-full ">

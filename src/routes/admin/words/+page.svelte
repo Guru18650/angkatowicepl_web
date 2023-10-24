@@ -35,6 +35,7 @@ import { getToastStore } from '@skeletonlabs/skeleton';
 				<th class="text-center">Angielski</th>
 				<th class="text-center">Polski</th>
 				<th class="text-center">Kategoria</th>
+				<th class="text-center">Subkategoria</th>
 				<th class="text-center">Akcja</th>
 			</tr>
 		</thead>
@@ -47,6 +48,7 @@ import { getToastStore } from '@skeletonlabs/skeleton';
 				<td class="text-center">{row.english}</td>
 				<td class="text-center">{row.polish}</td>
 				<td class="text-center">{row.category}</td>
+				<td class="text-center">{row.subcategory}</td>
 				<td class="!p-2"><form method="POST"
 					use:enhance={({form}) => {return ({result, update }) => {
 						if(result.data != true){
